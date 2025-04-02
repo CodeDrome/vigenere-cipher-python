@@ -1,5 +1,6 @@
 import re
 
+
 class VigenereCipher(object):
 
     """
@@ -10,6 +11,7 @@ class VigenereCipher(object):
     def __init__(self):
 
         self.tabularecta = self.__create_tabula_recta()
+        
 
     def __create_tabula_recta(self):
 
@@ -29,6 +31,7 @@ class VigenereCipher(object):
             tabularecta.append(row)
 
         return tabularecta
+
 
     def encipher(self, plaintext, keyword):
 
@@ -61,6 +64,7 @@ class VigenereCipher(object):
 
         return "".join(ciphertext)
 
+
     def decipher(self, ciphertext, keyword):
 
         """
@@ -91,12 +95,14 @@ class VigenereCipher(object):
 
         return "".join(decipheredtext)
 
+
     def __process_plaintext(self, plaintext):
 
         plaintext = plaintext.upper()
         plaintext = re.sub("[^A-Z]", "", plaintext)
 
         return plaintext
+
 
     def __get_keyword_repeated(self, keyword, length):
 

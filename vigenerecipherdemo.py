@@ -1,5 +1,6 @@
 import vigenerecipher
 
+
 def main():
 
     print("-------------------")
@@ -20,4 +21,6 @@ def main():
     print(f'Deciphered: {deciphered}')
 
 
-main()
+if __name__ == "__main__":
+
+    main()
